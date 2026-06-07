@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
 import EthLogo from '@/components/EthLogo';
+import ContractAddress from '@/components/ContractAddress';
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
 
         {/* Search Bar */}
         <SearchBar showSuggestions />
+
+        {/* Contract Address */}
+        <ContractAddress />
       </div>
 
       {/* Footer */}
