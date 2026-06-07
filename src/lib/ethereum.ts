@@ -1,9 +1,12 @@
 import { createPublicClient, http, formatEther, formatGwei } from 'viem';
 import { mainnet } from 'viem/chains';
 
+// Override with the RPC_URL env var (e.g. an Alchemy/Infura key) for production.
+const RPC_URL = process.env.RPC_URL || 'https://ethereum-rpc.publicnode.com';
+
 export const publicClient = createPublicClient({
   chain: mainnet,
-  transport: http('https://eth.llamarpc.com'),
+  transport: http(RPC_URL),
 });
 
 export { formatEther, formatGwei };

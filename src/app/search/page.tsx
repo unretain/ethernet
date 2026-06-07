@@ -4,7 +4,8 @@ import { shortenAddress } from '@/lib/utils';
 import SearchHeader from '@/components/SearchHeader';
 import EthLogo from '@/components/EthLogo';
 
-export const revalidate = 12;
+// Render on each request so the build never depends on RPC availability.
+export const dynamic = 'force-dynamic';
 
 interface SearchPageProps {
   searchParams: Promise<{

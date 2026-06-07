@@ -1,13 +1,8 @@
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
 import EthLogo from '@/components/EthLogo';
-import { publicClient } from '@/lib/ethereum';
 
-export const revalidate = 12;
-
-export default async function Home() {
-  const latestBlock = await publicClient.getBlockNumber();
-
+export default function Home() {
   return (
     <main className="min-h-screen bg-[#202124] flex flex-col">
       {/* Main content - centered */}
